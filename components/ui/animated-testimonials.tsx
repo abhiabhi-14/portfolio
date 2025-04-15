@@ -1,5 +1,5 @@
 "use client";
-
+import type { StaticImageData } from "next/image";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
@@ -9,8 +9,12 @@ type Testimonial = {
   quote: string;
   name: string;
   designation: string;
-  src: string;
+  src: string | StaticImageData;
 };
+
+const getImageKey = (src: string | StaticImageData) =>
+  typeof src === "string" ? src : src.src;
+
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
@@ -50,7 +54,7 @@ export const AnimatedTestimonials = ({
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={testimonial.src}
+                  key={getImageKey(testimonial.src)}
                   initial={{
                     opacity: 0,
                     scale: 0.9,

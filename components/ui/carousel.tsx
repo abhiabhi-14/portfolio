@@ -1,12 +1,13 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import type { StaticImageData } from "next/image";
 import Image from "next/image";
 
 interface SlideData {
   title: string;
   button: string;
-  src: string;
+  src: string | StaticImageData;
 }
 
 interface SlideProps {
@@ -21,7 +22,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   const xRef = useRef(0);
   const yRef = useRef(0);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number>(0);
 
   useEffect(() => {
     const animate = () => {

@@ -1,6 +1,5 @@
 "use client";
 import NavMenu from "../components/NavMenu";
-import { WavyBackground } from "@/components/ui/wavy-background";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { Slider3 } from "../components/Slider3";
 import { POR } from "../components/POR";
