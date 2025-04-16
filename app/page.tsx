@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import NavMenu from "../components/NavMenu";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { Slider3 } from "../components/Slider3";
@@ -11,10 +12,15 @@ import Hero from "../components/Hero";
 import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
+  useEffect(() => {
+    console.log("Hydration check:", document.body.innerHTML);
+  });
   return (
     <div className="overflow-x-hidden box-border bg-zinc-950 ">
       {/* Navbar Section */}
-      <NavMenu />
+      <div className="relative w-full">
+        <NavMenu />
+      </div>
 
       {/* Hero Section */}
       <Hero />

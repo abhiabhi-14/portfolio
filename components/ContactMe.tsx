@@ -35,7 +35,7 @@ export default function ContactMe() {
               <div className="w-full absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
               <div className="px-8 py-2 w-full bg-zinc-900 rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                 <a href="../public/Resume/Abhishek_Pant_Resume.pdf" download>
-                  Download CV
+                  Sumbit
                 </a>
               </div>
             </button>

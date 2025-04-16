@@ -21,7 +21,7 @@ const navItems = [
 export default function NavMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <div>
+    <div className="relative">
       <Navbar className="z-50 relative bg-zinc-50 top-[5vh]">
         <NavBody>
           <NavbarLogo />
