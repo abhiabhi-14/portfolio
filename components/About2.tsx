@@ -11,13 +11,13 @@ export function About2() {
     <div className="max-w-2xl mx-auto antialiased pt-4 relative">
       {dummyContent.map((item, index) => (
         <div key={`content-${index}`} className="mb-10">
-          <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+          <h2 className="bg-black text-gray-300 rounded-full text-sm w-fit px-4 py-1 mb-4">
             {item.badge}
           </h2>
 
           <p className={twMerge("text-xl mb-4")}>{item.title}</p>
 
-          <div className="text-sm text-zinc-50 prose prose-sm dark:prose-invert">
+          <div className="text-sm text-gray-300  prose prose-sm dark:prose-invert">
             {item?.image && (
               <Image
                 src={item.image}
@@ -37,7 +37,7 @@ export function About2() {
 
 const dummyContent = [
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "",
     description: (
       <>
         <p>
@@ -52,11 +52,11 @@ const dummyContent = [
         </p>
       </>
     ),
-    badge: "React",
+    badge: "Class X",
     image: img3,
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "",
     description: (
       <>
         <p>
@@ -72,11 +72,11 @@ const dummyContent = [
         </p>
       </>
     ),
-    badge: "Changelog",
+    badge: "Class XII",
     image: img3,
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "",
     description: (
       <>
         <p>
@@ -92,7 +92,7 @@ const dummyContent = [
         </p>
       </>
     ),
-    badge: "Launch Week",
+    badge: "College",
     image: img2,
   },
 ];
